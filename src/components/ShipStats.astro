@@ -1,0 +1,25 @@
+---
+// src/components/ShipStats.astro
+const { specs } = Astro.props;
+/*
+  usage:
+  import ShipStats from '~/components/ShipStats.astro';
+  <ShipStats specs={{
+    length: "260 m",
+    beam: "55 m",
+    crew: "3-6",
+    role: "Assault carrier"
+  }} />
+*/
+---
+<div class="rounded-lg p-4 shadow-sm border">
+  <h3 class="text-lg font-semibold mb-2">Quick specs</h3>
+  <dl class="grid grid-cols-2 gap-2 text-sm">
+    {Object.entries(specs).map(([k, v]) => (
+      <>
+        <dt class="font-medium text-xs text-muted-foreground">{k}</dt>
+        <dd class="break-words">{v}</dd>
+      </>
+    ))}
+  </dl>
+</div>
