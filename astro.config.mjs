@@ -5,22 +5,34 @@ import starlight from "@astrojs/starlight";
 /**
  * @type {import('astro').AstroUserConfig}
  */
-export default defineConfig({site: 'https://Liiqt.github.io',
-  base: '/FinalStar',
+export default defineConfig({
+  site: "https://Liiqt.github.io",
+  base: "/FinalStar",
   integrations: [
-    starlight({ customCss: ["./src/styles/custom.css"],
-      favicon: './public/favicon.png',
+    starlight({
+      customCss: ["./src/styles/custom.css"],
+      favicon: "./public/favicon.png",
       title: "Final Star",
-      plugins:[],
-      social: [
-
-      ],
+      plugins: [],
+      social: [],
 
       sidebar: [
         { label: "Home", slug: "index" },
         { label: "Introduction", slug: "introduction" },
         { label: "Timeline", slug: "timeline" },
-
+        {
+          label: "Core Technology",
+          slug: "coreTechnology",
+          items: [
+            { label: "Overview", slug: "coreTechnology/index" },
+            { label: "Weapons", slug: "coreTechnology/weapons" },
+            {
+              label: "Shield Generators",
+              slug: "coreTechnology/shieldGenerators",
+            },
+            { label: "Power Plants", slug: "coreTechnology/powerPlants" },
+          ],
+        },
         {
           label: "Species",
           items: [
