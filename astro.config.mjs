@@ -20,19 +20,19 @@ export default defineConfig({
         { label: "Home", slug: "index" },
         { label: "Introduction", slug: "introduction" },
         { label: "Timeline", slug: "timeline" },
-        {
-          label: "Core Technology",
-          slug: "coreTechnology",
-          items: [
-            { label: "Overview", slug: "coreTechnology/index" },
-            { label: "Weapons", slug: "coreTechnology/weapons" },
-            {
-              label: "Shield Generators",
-              slug: "coreTechnology/shieldGenerators",
-            },
-            { label: "Power Plants", slug: "coreTechnology/powerPlants" },
-          ],
-        },
+    {
+  label: "Core Technology",
+  // No slug here makes it a non-clickable header
+  items: [
+    { label: "Overview", slug: "core_technology" }, // Correct slug for the index
+    { label: "Weapons", slug: "core_technology/weapons" },
+    { label: "Shield Generators", slug: "core_technology/shield_generators" },
+    { label: "Power Plants", slug: "core_technology/power_plants" },
+  ],
+},
+          
+          
+        
         {
           label: "Species",
           items: [
